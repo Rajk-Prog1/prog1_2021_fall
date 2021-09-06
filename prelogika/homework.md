@@ -39,7 +39,7 @@ A Deepnote-os fórumra posztolni fogunk kérdéseket a videókkal kapcsolatban, 
 
 Ha mélyebben érdekel a bináris összeadós téma, érdemes megnézni ezt a kétrészes videósorozatot is:
 - [első](https://www.youtube.com/watch?time_continue=738&v=l7rce6IQDWs&feature=emb_logo&fbclid=IwAR2gdCGpGMqVgul2H6PUMcpmJGR3Zq-3zvka-qWTwoFcoEgR56IKRoNjQIA)
-- [második](https://www.youtube.com/watch?v=uqY3FMuMuRo&feature=youtu.be&fbclid=IwAR3I1DtZ5T_X8mFlfBGPiF_UAgGnrNGYDqjw9GmJWc1e8wug5rU8Ag8tpyA)),
+- [második](https://www.youtube.com/watch?v=uqY3FMuMuRo&feature=youtu.be&fbclid=IwAR3I1DtZ5T_X8mFlfBGPiF_UAgGnrNGYDqjw9GmJWc1e8wug5rU8Ag8tpyA),
 ahol bináris összeadók segítségével létrejön az alábbi kép egy madárról.
 
 ![bird.png](bird.png)
