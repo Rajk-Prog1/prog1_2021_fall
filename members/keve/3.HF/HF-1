@@ -1,0 +1,45 @@
+1.	Harmadfokú egyenletet megoldása.
+Át (a,b,c,d ∈ R ∧ x1,x2,x3 ∈ C)
+Ef ()
+Uf (∀i(axi^3 + bxi^2 + cxi + d = 0) ∧ (x1 + x2 + x3 = −b /a x1 + x2 + x3 = −b a , x1x2x3 = −d a , 1 x1 + 1 x2 + 1 x3 = − c dx1 + x2 + x3 = −b a , x1x2x3 = −d a , 1 x1 + 1 x2 + 1 x3 = − c d x1x2x3 = −d a , 1 x1 + 1 x2 + 1 x3 = − c d)
+
+2.	Egy tíz számból álló tömbben ha van páros, számoljuk ki a 10 szám szorzatát, ha nincs közte páros szám, adjuk meg a legkisebb számot.
+Át (g ∈ N^n, x ∈ N)
+Ef (n=10)
+Uf ((∃gi(gi ∈ g ∧ 2|gi)) ⇔ x=∏gi)⊕( (∄gi(gi ∈ g ∧ 2|gi)) ⇔ x=min(gi)))
+
+3.	Két természetes szám legkisebb közös többszörösének megtalálása.
+Át (a,b,x ∈ N)
+Ef (a ≠ 0, b ≠ 0)
+Uf ((∃x (a|x, ∧ b|x)) ∧ (∄i (a|i ∧ b|i ∧ i < x)))
+
+4.	 Két számhoz keresünk egyet ami a két szám összege és különbsége között van.
+Át (a,b,x ∈ R)
+Ef ()
+Uf (∃x(((a+b)<x<(a-b)) ∨ ((a+b)>x>(a-b))))
+
+5.	Bogi – 2
+Át (f ∈ N^n; fi, pi,vi, x ∈ N, fi – i-edik lakás sorszáma, pi – i-edik lakás ára, vi- i-edik lakás értéke)
+Ef (∄gi(gi=0))
+Uf (∃x (x=fi(max(vi/pi))))
+
+6.	Bogi – 5  
+Át (g ∈ N^n; x ∈ g, x ∈ N^m, n>m,)
+Ef (∃gi(3|gi))
+Uf (gi ∈ x ⇔ gi(3|gi)
+
+7.	Eszter – 1
+Át (g ∈ N^n; x ∈ g)
+Ef (∃gi(2|gi))
+Uf (∃x(x=gi(max(gi(2|gi))))
+
+8.	Szabi – 4
+Át (g ∈ N^n; x ∈ N^m; x ∈ g; y, m ∈ N; m <=n)
+Ef (∃gi(gi>10 ∧ gi=2y+1)
+Uf (gi(gi>10 ∧ gi=2y+1) ⇔ (gi ∈ x))
+
+
++ Nehéz	
+Át (P(a,b); P: R→B; a,b,x ∈ N)
+Ef (a=a’; b=b’)
+Uf (x(((P(a,b)=P(a,x)) ∨ ((P(a,b)=P(x,b))))
