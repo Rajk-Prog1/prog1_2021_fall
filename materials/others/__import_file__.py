@@ -1,0 +1,9 @@
+from jkg_evaluators import string_with_most_a_letters as mbence
+from jkg_evaluators import largest_multiple as dani
+from jkg_evaluators import sum_odd_positives as bogi
+from jkg_evaluators import largest_ascending_num as katinka
+from jkg_evaluators import letter_occurrences as keve
+from jkg_evaluators import word_with_most_of_letters as dorka
+from jkg_evaluators import largest_even_divided as eszter
+from jkg_evaluators import smallest_where_double_also as szabi
+from jkg_evaluators import last_with_three_multiple_difference as hako
