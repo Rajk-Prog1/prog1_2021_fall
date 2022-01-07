@@ -1,0 +1,182 @@
+14.: Katinka
+def fv_14(timestamp):
+    leghosszabb=0
+    szerzo=''
+    for i in list_of_dicts:
+        if i['timestamp_ms']<timestamp:
+            if i['content_l']>leghosszabb:
+                leghosszabb=i['content_l']
+                szerzo=i['sender_name']
+    return szerzo
+
+15.:Szabi
+def aktiv(timestamp):
+    orak = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+    d = {}
+    for i in range(len(orak)):
+        d[orak[i]] = 0
+    for l in list_of_dicts:
+        if l['timestamp_ms']<timestamp:
+            d[l['hour']] = d[l['hour']]+1
+    x=d[1]
+    y=0
+    for n in d.keys():
+        if d[n]<x:
+            x=d[n]
+            y=n
+    return y
+
+16.:
+def fv_16(timestamp, ember):
+    karakterek=0
+    szerzo=''
+    for i in list_of_dicts:
+        if i['timestamp_ms']<timestamp:
+            if i['sender_name']==ember:
+                karakterek=karakterek+i['content_l']
+    return karakterek
+
+17.: Katinka
+def fv_17(timestamp):
+    buzgok={}
+    hanyan=0
+    for i in list_of_dicts:
+	buzgok[i['sender_name']]=0
+    for i in tqdm(list_of_dicts):
+        if i['timestamp_ms']<timestamp:
+            if i['type']=='Generic':
+		buzgok[i['sender_name']]=buzgok[i['sender_name']]+1
+    for i in buzgok:
+	if buzgok[i]>=10:
+	    hanyan=hanyan+1
+    return hanyan
+
+18.: Katinka
+def fv_18(timestamp):
+    porgos={}
+    for i in list_of_dicts:
+        porgos[i['thread_path']]=0
+    for i in tqdm(list_of_dicts):
+        if i['timestamp_ms']<timestamp:
+                porgos[i['thread_path']]=porgos[i['thread_path']]+1
+    rendezett=sorted(porgos.items(), key=lambda x: x[1], reverse=True)
+    top5=[rendezett[0][0], rendezett[1][0], rendezett[2][0], rendezett[3][0], rendezett[4][0]]
+    return top5
+
+19.: Szabi
+def tizenkilenc(thread_path,timestamp):
+    sender_names = []
+    for j in list_of_dicts:
+        if j['timestamp_ms']<timestamp:
+            if j['thread_path'] == thread_path:
+                sender_names.append(j['sender_name'])
+    sender_names_sing = list(set(sender_names))   
+    y=len(sender_names_sing)
+        
+    x=0   
+    for l in list_of_dicts:
+        if l['timestamp_ms']<timestamp:
+            if l['thread_path'] == thread_path:
+                x=x+1
+    z=0            
+    for i in list_of_dicts:
+        if i['timestamp_ms']<timestamp:
+            if i['thread_path'] == thread_path:
+                z=z+i['content_l']
+        
+    return y,x,z
+
+19. plusz: Szabi
+def tizenkilencb (thread_path,timestamp):
+    sender_names = []
+    for j in list_of_dicts:
+        if j['timestamp_ms']<timestamp:
+            if j['thread_path'] == thread_path:
+                sender_names.append(j['sender_name'])
+    sender_names_sing = list(set(sender_names))   
+    d={}
+    for g in sender_names_sing:
+        d[g]=[0,0]
+    
+    for i in tqdm(sender_names_sing):
+        for k in list_of_dicts:
+            if k['thread_path']==thread_path:
+                if k['timestamp_ms']<timestamp:
+                    if k['sender_name']==i:
+                        d[i][0]=d[i][0]+k['content_l']
+                        d[i][1]=d[i][1]+1
+                    
+    return d
+
+20.: Katinka
+def fv_20(hour):
+    kuldtek=0
+    napok=[]
+    for i in tqdm(list_of_dicts):
+        if i['hour']==hour and i['type']=='Generic':
+                kuldtek=kuldtek+1
+                napok.append(str(i['year'])+"-"+str(i['month'])+"-"+str(i['day']))
+                napok=list(set(napok))
+    return kuldtek/len(napok)
+
+21.: Katinka
+def fv_21(timestamp):
+    porgos=[]
+    a=[]
+    for i in list_of_dicts:
+        if i['timestamp_ms']<timestamp:
+            a.append(i['thread_path'])
+    a=list(set(a))
+    for j in tqdm(a):
+        legtobb_karakter={}
+        for m in nevek:
+            legtobb_karakter[m]=0
+        for k in list_of_dicts:
+            if k['thread_path']==j and k['timestamp_ms']<timestamp:
+                legtobb_karakter[k['sender_name']] = legtobb_karakter[k['sender_name']]+k['content_l']
+        rendezett=sorted(legtobb_karakter.items(), key=lambda x: x[1], reverse=True)
+        elem=[j, rendezett[0]]
+        porgos.append(elem)
+    vegso_rend=sorted(porgos, key=lambda x: x[1][1], reverse=True)
+    return vegso_rend[0], vegso_rend[1], vegso_rend[2], vegso_rend[3], vegso_rend[4]
+
+22.: Szabi
+def huszonketto(timestamp):
+    tstamps=[]
+    for l in list_of_dicts:
+        if l['timestamp_ms']<timestamp:
+            if l['type']=='Generic':
+                tstamps.append(l['timestamp_ms'])
+                
+    tstamps.sort()
+    diff=[]
+    for i in range(len(tstamps)-1):
+        diff.append(tstamps[i]-tstamps[i+1])
+    x=min(diff)
+    y=abs(x)
+    return y
+
+Bónusz:Keve+Ákos: Szabi
+
+def keveek3(timestamp):
+    evek=[2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021]
+    honapok=[1,2,3,4,5,6,7,8,9,10,11,12]
+    napok=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+    orak=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+    d={}
+    for i in evek:
+        for j in honapok:
+            for k in napok:
+                for l in orak:
+                    d[i,j,k,l]=0
+    for x in list_of_dicts:
+        if x['timestamp_ms']<timestamp:
+            d[x['year'],x['month'],x['day'],x['hour']]=d[x['year'],x['month'],x['day'],x['hour']]+1
+
+    x=0
+    for z in d.keys():
+        if d[z]>x:
+            x=d[z]
+            g=z
+        
+    return g
