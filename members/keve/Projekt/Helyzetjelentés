@@ -1,0 +1,15 @@
+
+
+A projekt célja: A program megmondja, hogy adott szabályokat betartva milyen hozam 
+lett volna elérhető egy-egy a magyar tőzsdén jegyzett részvény kereskedése által az adott időszakban.
+
+Eszközök: Azt szeretném elérni, hogy a program futásakor a megadott részvény, megadott időszakára scrapelje 
+le az adatokat a program a BET oldaláról. Ehhez amennyire egyelőre nézelődtem külső kiegészítőket kell 
+installálni, úgy viszont már nem olyan bonyolult. 
+
+Hogyan állok: Rosszul, vagy mondhatom, hogy sehogyan. Az elmúlt 2 hétben terveztem volna vele aktívabban 
+foglalkozni. Ezt azonban ellehetetlenítette, hogy a szervezetem azóta kifejezetten problémásan működött. 
+(Illetve a záróvizsgám is most kedden lesz.) Ennek egyértelmű következménye, hogy jelentősen egyszerűbb
+ technikai elemzési eszközöket fogok csak használni. Jelenleg úgy gondolom, hogy elképzelhető, hogy csak 
+ mozgóátlagokat, boolinger szalagokat és RSI-t fogok számolni. A BÉT oldalát megnéztem, nem a leginkább 
+ kézenfekvően, de hozzáférhetőek a szükséges adatok. 
